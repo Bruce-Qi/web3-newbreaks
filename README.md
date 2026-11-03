@@ -65,15 +65,7 @@ flutter run            # 连接手机/模拟器，或在 Mac 上 flutter run -d 
    - `android` → `Web3News-android-universal.apk`（还有 arm64 / armv7 分包）
    - `ios` → `Web3News-ios-unsigned.ipa`
    - `macos` → `Web3News-macos.dmg`
-3. 推送 `v1.0.0` 这样的 tag 会自动创建 GitHub Release，附上三个安装包：
-
-```bash
-git tag v1.0.0
-```
-
-```bash
-git push origin v1.0.0
-```
+3. 每次 push 到 `main` 构建成功后，会自动发布/更新 GitHub Release（标签取 `pubspec.yaml` 里的 `version`，如 `v1.0.0`），附上三个安装包。发新版本时把 `version` 改成 `1.0.1+2` 再 push 即可。
 
 ### 方式二：在自己电脑上构建
 
